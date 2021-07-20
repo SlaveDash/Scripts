@@ -92,7 +92,7 @@ tool.Equipped:Connect(function()
                 if isnetworkowner(lookingat) then
                     selection.Color3 = _G.highlightcolors.Owned
                 else
-                    if lookingat.Parent:IsA("Accessory") then
+                    --[[if lookingat.Parent:IsA("Accessory") then
                         local hatroot = lookingat.Parent.Parent:FindFirstChild("HumanoidRootPart")
                         if hatroot and isnetworkowner(hatroot) then
                             selection.Color3 = _G.highlightcolors.OwnedJoint
@@ -130,10 +130,10 @@ tool.Equipped:Connect(function()
                         
                         if rootpart and isnetworkowner(rootpart) then
     					    selection.Color3 = _G.highlightcolors.OwnedJoint
-        				else
+        				else]]
                         	selection.Color3 = _G.highlightcolors.Unanchored
-                        end
-    			    end
+                        --[[end
+    			    end]]
                 end
             end
         else
