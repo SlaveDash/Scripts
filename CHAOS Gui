@@ -118,7 +118,7 @@ KillNear.MouseButton1Click:Connect(function()
             local targ
             local range = 10000
             for i,v in pairs(workspace:GetChildren()) do
-                if v~=GetChar() and not table.find(IgnoreList,v.Name) then
+                if v~=GetChar() and not table.find(_G.IgnoreList,v.Name) then
                     local vhum = v:FindFirstChild("Humanoid")
                     local vroot = v:FindFirstChild("HumanoidRootPart")
                     if vhum and vroot then
