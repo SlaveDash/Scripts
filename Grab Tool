@@ -26,9 +26,13 @@ for i,v in pairs(Defaults) do
 	end
 end
 
-_G.maincolor = _G.maincolor.Color
+if type(_G.maincolor) == "BrickColor" then
+	_G.maincolor = _G.maincolor.Color
+end
 for i,v in pairs(_G.colors) do
-	_G.colors[i] = v.Color
+	if type(v) == "BrickColor" then
+		v = v.Color
+	end
 end
 
 local function Initiate()
