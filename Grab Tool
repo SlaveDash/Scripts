@@ -26,11 +26,11 @@ for i,v in pairs(Defaults) do
 	end
 end
 
-if type(_G.maincolor) == "BrickColor" then
+if typeof(_G.maincolor) == "BrickColor" then
 	_G.maincolor = _G.maincolor.Color
 end
 for i,v in pairs(_G.colors) do
-	if type(v) == "BrickColor" then
+	if typeof(v) == "BrickColor" then
 		v = v.Color
 	end
 end
