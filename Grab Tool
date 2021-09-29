@@ -62,11 +62,11 @@ local function Initiate()
 	tool.Name = "Grab Tool"
 	tool.CanBeDropped = false
 	local handle = Instance.new("Part")
-	handle.Color = _G.maincolor
 	handle.Material = Enum.Material.Neon
 	handle.Size = Vector3.new(0.8,0.8,0.8)
 	handle.Name = "Handle"
 	handle.Shape = Enum.PartType.Ball
+	pcall(function() handle.Color = _G.maincolor end)
 	handle.Parent = tool
 
 	-- FX Functions
