@@ -26,6 +26,11 @@ for i,v in pairs(Defaults) do
 	end
 end
 
+_G.maincolor = _G.maincolor.Color
+for i,v in pairs(_G.colors) do
+	_G.colors[i] = v.Color
+end
+
 local function Initiate()
 	local character = player.Character
 
@@ -70,7 +75,7 @@ local function Initiate()
 				local spark = Instance.new("Part")
 				spark.Shape = Enum.PartType.Ball
 				spark.Material = Enum.Material.Neon
-				spark.BrickColor = _G.colors[Random.new():NextInteger(1,#_G.colors)]
+				spark.Color = _G.colors[Random.new():NextInteger(1,#_G.colors)]
 				spark.Size = Vector3.new(0.1,0.1,0.1)
 				spark.CFrame = handle.CFrame
 				spark.Anchored = true
@@ -150,7 +155,7 @@ local function Initiate()
 		beam.Anchored = true
 		beam.CanCollide = false
 		beam.Transparency = 1
-		beam.BrickColor = BrickColor.new("Bright blue")
+		beam.Color = _G.maincolor
 		local mesh = Instance.new("SpecialMesh",beam)
 		mesh.MeshType = Enum.MeshType.Cylinder
 		beam.Parent = folder
