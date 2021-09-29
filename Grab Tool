@@ -202,6 +202,7 @@ local function Initiate()
 		holding = nil
 		mouse.TargetFilter = nil
 		bodpos:Destroy()
+		rotvel:Destroy()
 		beam:Destroy()
 		trail:Destroy()
 	end
